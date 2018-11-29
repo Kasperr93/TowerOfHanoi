@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 
 /**
  * @author Tomasz Kasperek
- * @version 0.1 11/23/2018
+ * @version 0.2 11/29/2018
  * @since 0.1
  */
 
@@ -29,5 +29,9 @@ public class Utils {
         }
 
         return line;
+    }
+
+    public static String removeLastSeparator(StringBuilder str, String separator) {
+        return str.substring(0, str.lastIndexOf(separator));
     }
 }
