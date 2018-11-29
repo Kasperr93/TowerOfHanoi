@@ -2,7 +2,7 @@ package kasperek.game;
 
 /**
  * @author Tomasz Kasperek
- * @version 0.1 11/23/2018
+ * @version 0.2 11/28/2018
  * @since 0.1
  */
 
