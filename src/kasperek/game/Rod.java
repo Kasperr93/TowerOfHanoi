@@ -1,10 +1,12 @@
 package kasperek.game;
 
+import kasperek.utils.Utils;
+
 import java.util.Stack;
 
 /**
  * @author Tomasz Kasperek
- * @version 0.2 11/28/2018
+ * @version 0.3 11/29/2018
  * @since 0.1
  */
 
@@ -28,6 +30,13 @@ public class Rod {
 
     @Override
     public String toString() {
-        return "Rod name: " + name + ", Number of disk: " + disks.size() + " Disk list: " + disks.toString();
+        StringBuilder sb = new StringBuilder();
+        sb.append(name).append(" |- ");
+
+        for (int i = 0; i < this.getDisks().size(); i++) {
+            sb.append(this.disks.get(i).getSize()).append(" - ");
+        }
+
+        return Utils.removeLastSeparator(sb, "-");
     }
 }
