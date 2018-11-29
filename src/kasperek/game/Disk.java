@@ -19,6 +19,6 @@ public class Disk {
 
     @Override
     public String toString() {
-        return super.toString();
+        return "Disk size: " + size;
     }
 }
