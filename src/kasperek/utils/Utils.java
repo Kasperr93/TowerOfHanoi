@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 
 /**
  * @author Tomasz Kasperek
- * @version 0.3 11/30/2018
+ * @version 0.9 12/05/2018
  * @since 0.1
  */
 
