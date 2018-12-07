@@ -5,13 +5,13 @@ import kasperek.main.Main;
 
 /**
  * @author Tomasz Kasperek
- * @version 1.1 12/05/2018
+ * @version 1.1.1 12/07/2018
  * @since 0.1
  */
 
 public class ConsoleInterfaces {
     public static String welcomeScreen() {
-        System.out.println("\033[1mHey! Let's play on Tower of Hanoi!\033[0m");
+        System.out.println("\033[1m\nHey! Let's play on Tower of Hanoi!\033[0m");
         System.out.println("\nType:");
         System.out.println("\033[1m1\033[0m - If you knows the game rules and you want to start the game;");
         System.out.println("\033[1m2\033[0m - If you want to knows the game rules;");
@@ -22,7 +22,7 @@ public class ConsoleInterfaces {
         var userChoice = Utils.readLine();
 
         while (!Utils.validateUserValue(userChoice)) {
-            System.err.println("Invalid value. Try again.");
+            System.err.println("\nInvalid value. Try again.\n");
             userChoice = Utils.readLine();
         }
 
@@ -30,7 +30,7 @@ public class ConsoleInterfaces {
     }
 
     public static void gameRulesScreen() {
-        System.out.println("The Towers of Hanoi is an ancient puzzle played with three stacks and any number of " +
+        System.out.println("\nThe Towers of Hanoi is an ancient puzzle played with three stacks and any number of " +
                 "differently-sized disks.\nAt the start, all the disks are in the leftmost stack, with the largest " +
                 "disk on the bottom and the smallest on the top.\nThe object is to get all the disks over " +
                 "to the rightmost stack.\n");
@@ -42,14 +42,14 @@ public class ConsoleInterfaces {
         System.out.println("\033[1mType 1 to back to the main menu.\033[0m\n");
 
         while (!Utils.readLine().equals("1")) {
-            System.err.println("Invalid value. Try again.");
+            System.err.println("\nInvalid value. Try again.\n");
         }
 
         Main.main(null);
     }
 
     public static void hanoiLegendScreen() {
-        System.out.println("According to the legend of the Tower of Hanoi (originally the \"Tower of Brahma\" " +
+        System.out.println("\nAccording to the legend of the Tower of Hanoi (originally the \"Tower of Brahma\" " +
                 "in a temple in the Indian city of Benares), \nthe temple priests are to transfer " +
                 "a tower consisting of 64 fragile disks of gold from one part of the temple to another, " +
                 "one disk at a time. \nThe disks are arranged in order, no two of them the same size, " +
@@ -61,27 +61,27 @@ public class ConsoleInterfaces {
         System.out.println("\033[1mType 1 to back to the main menu.\033[0m\n");
 
         while (!Utils.readLine().equals("1")) {
-            System.err.println("Invalid value. Try again.");
+            System.err.println("\nInvalid value. Try again.\n");
         }
 
         Main.main(null);
     }
 
     public static void gameSolutionScreen(String fromRod, String toRod) {
-        System.out.println("\033[1m" + fromRod + "\033[0m" + " move to " + "\033[1m" + toRod + "\033[0m" + ".");
+        System.out.println("\nFrom \033[1mRod " + fromRod + "\033[0m" + " move to " + "\033[1mRod " + toRod + "\033[0m" + ".");
     }
 
     public static int howManyDisk() {
-        System.out.println("How many disks do you want to solve?");
+        System.out.println("\nHow many disks do you want to solve?\n");
         var choice = Utils.readLine();
         var correctValue = false;
 
         while (!correctValue) {
             if (!Utils.isNumber(choice)) {
-                System.err.println("This is not a number. Try again");
+                System.err.println("\nThis is not a number. Try again\n");
                 choice = Utils.readLine();
             } else if (!Utils.validateUserValue(Integer.valueOf(choice))) {
-                System.err.println("The number can't be less than 3.");
+                System.err.println("\nThe number can't be less than 3.\n");
                 choice = Utils.readLine();
             } else {
                 correctValue = true;
@@ -92,6 +92,8 @@ public class ConsoleInterfaces {
     }
 
     public static void displayGame(Rod[] rods) {
+        System.out.println();
+
         for (Rod rod : rods) {
             System.out.println(rod.toString());
         }
@@ -104,47 +106,75 @@ public class ConsoleInterfaces {
         System.out.println("Type 1, 2 or 3:\n");
 
         String userChoice = Utils.readLine();
+        var correctValue = false;
 
-        if (!Utils.isNumber(userChoice)) {
-            System.err.println("This isn't a number. Try again.\n");
-            userChoice = Utils.readLine();
-        } else if (Integer.valueOf(userChoice) < 1 || Integer.valueOf(userChoice) > 3) {
-            System.err.println("The rod doesn't exist. Try again.\n");
-            userChoice = Utils.readLine();
+        while (!correctValue) {
+            if (!Utils.isNumber(userChoice)) {
+                System.err.println("This isn't a number. Try again.\n");
+                userChoice = Utils.readLine();
+            } else if (Integer.valueOf(userChoice) < 1 || Integer.valueOf(userChoice) > 3) {
+                System.err.println("The rod doesn't exist. Try again.\n");
+                userChoice = Utils.readLine();
+            } else {
+                correctValue = true;
+            }
         }
 
         return Integer.valueOf(userChoice);
     }
 
     public static int getSecondMove() {
-        System.out.println("To which rod do you wanna move to the disk?");
+        System.out.println("\nTo which rod do you wanna move to the disk?");
         System.out.println("Type 1, 2 or 3:\n");
 
         String userChoice = Utils.readLine();
+        var correctValue = false;
 
-        if (!Utils.isNumber(userChoice)) {
-            System.err.println("This isn't a number. Try again.\n");
-            userChoice = Utils.readLine();
-        } else if (Integer.valueOf(userChoice) < 1 || Integer.valueOf(userChoice) > 3) {
-            System.err.println("The rod doesn't exist. Try again.\n");
-            userChoice = Utils.readLine();
+        while (!correctValue) {
+            if (!Utils.isNumber(userChoice)) {
+                System.err.println("This isn't a number. Try again.\n");
+                userChoice = Utils.readLine();
+            } else if (Integer.valueOf(userChoice) < 1 || Integer.valueOf(userChoice) > 3) {
+                System.err.println("The rod doesn't exist. Try again.\n");
+                userChoice = Utils.readLine();
+            } else {
+                correctValue = true;
+            }
         }
 
         return Integer.valueOf(userChoice);
     }
 
     public static void rodIsEmpty() {
-        System.err.println("The rod is empty. Try again.");
+        System.err.println("\nThe rod is empty. Try again.\n");
     }
 
     public static void notAllowedMove() {
-        System.err.println("The move isn't allowed. Try again.");
+        System.err.println("\nThe move isn't allowed. Try again.");
     }
 
     public static void showResultGame(int steps) {
-        System.out.println("Congratulations! You end the Tower of Hanoi. You needed a " + steps + " steps to solve " +
+        System.out.println("\nCongratulations! You end the Tower of Hanoi. You needed a " + steps + " steps to solve " +
                 "the Hanoi puzzle. \nMaybe you have to start again with more number of puzzles? :)\n");
+    }
+
+    public static void againGame() {
         System.out.println("Do you want start again?");
-        System.out.println("Type:\n1 - if you want start again;\n\"q\" - if you want exit the program.");
+        System.out.println("Type:\n1 - if you want start again;\n\"q\" - if you want exit the program.\n");
+
+        var userChoice = Utils.readLine();
+        var correctValue = false;
+
+        while (!correctValue) {
+            if (userChoice.equalsIgnoreCase("q"))
+                System.exit(0);
+            else if (userChoice.equals("1")) {
+                correctValue = true;
+                Main.main(null);
+            } else {
+                System.err.println("\nInvalid value. Try again.\n");
+                userChoice = Utils.readLine();
+            }
+        }
     }
 }
