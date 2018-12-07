@@ -7,7 +7,7 @@ import java.util.Stack;
 
 /**
  * @author Tomasz Kasperek
- * @version 0.9 12/05/2018
+ * @version 1.0 12/07/2018
  * @since 0.1
  */
 
@@ -45,7 +45,7 @@ public class GameLogic {
             fromDiskSize = fromRod.getDisks().peek().getSize();
         } catch (EmptyStackException e) {
             ConsoleInterfaces.rodIsEmpty();
-            doTheSelectMove(firstStep(), secondStep());
+            return;
         }
 
         try {
