@@ -1,11 +1,12 @@
 package kasperek.main;
 
 import kasperek.game.GameLogic;
+import kasperek.solution.GameSolution;
 import kasperek.utils.ConsoleInterfaces;
 
 /**
  * @author Tomasz Kasperek
- * @version 0.9 12/05/2018
+ * @version 1.0 12/07/2018
  * @since 0.1
  */
 
@@ -13,6 +14,7 @@ public class Main {
 
     public static void main(String[] args) {
         GameLogic game = new GameLogic();
+        GameSolution solution;
 
         var choice = ConsoleInterfaces.welcomeScreen();
 
@@ -24,6 +26,7 @@ public class Main {
                     game.doTheSelectMove(game.firstStep(), game.secondStep());
                 }
 
+                ConsoleInterfaces.againGame();
                 break;
             case "2":
                 ConsoleInterfaces.gameRulesScreen();
@@ -32,7 +35,11 @@ public class Main {
                 ConsoleInterfaces.hanoiLegendScreen();
                 break;
             case "4":
-//                game
+                solution = new GameSolution();
+                solution.solveHanoi(ConsoleInterfaces.howManyDisk(), "A", "B", "C");
+                solution.showSolveResult();
+
+                ConsoleInterfaces.againGame();
                 break;
         }
     }
