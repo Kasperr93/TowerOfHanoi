@@ -5,7 +5,7 @@ import kasperek.main.Main;
 
 /**
  * @author Tomasz Kasperek
- * @version 1.1.2 12/12/2018
+ * @version 1.1.3 12/12/2018
  * @since 0.1
  */
 
@@ -14,10 +14,10 @@ public class ConsoleInterfaces {
         System.out.println("\033[1m\nHey! Let's play on Tower of Hanoi!\033[0m");
         System.out.println("\nType:");
         System.out.println("\033[1m1\033[0m - If you knows the game rules and you want to start the game;");
-        System.out.println("\033[1m2\033[0m - If you want to knows the game rules;");
-        System.out.println("\033[1m3\033[0m - If you want to knows the Hanoi legend;");
+        System.out.println("\033[1m2\033[0m - If you want to know the game rules;");
+        System.out.println("\033[1m3\033[0m - If you want to know the Hanoi legend;");
         System.out.println("\033[1m4\033[0m - If you want to see how to solution Tower of Hanoi;");
-        System.out.println("\"\033[1mq\033[0m\" - If you want exit the program.\n");
+        System.out.println("\"\033[1mq\033[0m\" - If you want to exit the program.\n");
 
         var userChoice = Utils.readLine();
 
@@ -78,7 +78,7 @@ public class ConsoleInterfaces {
 
         while (!correctValue) {
             if (!Utils.isNumber(choice)) {
-                System.err.println("\nThis is not a number. Try again\n");
+                System.err.println("\nThis isn't a number. Try again\n");
                 choice = Utils.readLine();
             } else if (!Utils.validateUserValue(Integer.valueOf(choice))) {
                 System.err.println("\nThe number can't be less than 3.\n");
@@ -102,7 +102,7 @@ public class ConsoleInterfaces {
     }
 
     public static int getFirstMove() {
-        System.out.println("From which rod do you wanna move to the disk?");
+        System.out.println("From which rod do you want to move to the disk?");
         System.out.println("Type 1, 2 or 3:\n");
 
         String userChoice = Utils.readLine();
@@ -124,7 +124,7 @@ public class ConsoleInterfaces {
     }
 
     public static int getSecondMove() {
-        System.out.println("\nTo which rod do you wanna move to the disk?");
+        System.out.println("\nTo which rod do you want to move to the disk?");
         System.out.println("Type 1, 2 or 3:\n");
 
         String userChoice = Utils.readLine();
@@ -154,13 +154,13 @@ public class ConsoleInterfaces {
     }
 
     public static void getGameResult(int steps) {
-        System.out.println("\nCongratulations! You end the Tower of Hanoi. You needed a " + steps + " steps to solve " +
-                "the Hanoi puzzle. \nMaybe you have to start again with more number of puzzles? :)\n");
+        System.out.println("\nCongratulations! You ended the Tower of Hanoi. You needed a " + steps + " steps to solve " +
+                "the Hanoi puzzle. \nDo have you to start again with more number of puzzles? :)\n");
     }
 
     public static void playAgain() {
-        System.out.println("Do you want start again?");
-        System.out.println("Type:\n1 - if you want start again;\n\"q\" - if you want exit the program.\n");
+        System.out.println("Do you want to start again?");
+        System.out.println("Type:\n1 - if you want to start again;\n\"q\" - if you want to exit the program.\n");
 
         var userChoice = Utils.readLine();
         var correctValue = false;
