@@ -5,7 +5,7 @@ import kasperek.main.Main;
 
 /**
  * @author Tomasz Kasperek
- * @version 1.1.1 12/07/2018
+ * @version 1.1.2 12/12/2018
  * @since 0.1
  */
 
@@ -48,7 +48,7 @@ public class ConsoleInterfaces {
         Main.main(null);
     }
 
-    public static void hanoiLegendScreen() {
+    public static void legendOfHanoiScreen() {
         System.out.println("\nAccording to the legend of the Tower of Hanoi (originally the \"Tower of Brahma\" " +
                 "in a temple in the Indian city of Benares), \nthe temple priests are to transfer " +
                 "a tower consisting of 64 fragile disks of gold from one part of the temple to another, " +
@@ -71,7 +71,7 @@ public class ConsoleInterfaces {
         System.out.println("\nFrom \033[1mRod " + fromRod + "\033[0m" + " move to " + "\033[1mRod " + toRod + "\033[0m" + ".");
     }
 
-    public static int howManyDisk() {
+    public static int getNumbersDisk() {
         System.out.println("\nHow many disks do you want to solve?\n");
         var choice = Utils.readLine();
         var correctValue = false;
@@ -91,7 +91,7 @@ public class ConsoleInterfaces {
         return Integer.valueOf(choice);
     }
 
-    public static void displayGame(Rod[] rods) {
+    public static void displayGameOnConsole(Rod[] rods) {
         System.out.println();
 
         for (Rod rod : rods) {
@@ -153,12 +153,12 @@ public class ConsoleInterfaces {
         System.err.println("\nThe move isn't allowed. Try again.");
     }
 
-    public static void showResultGame(int steps) {
+    public static void getGameResult(int steps) {
         System.out.println("\nCongratulations! You end the Tower of Hanoi. You needed a " + steps + " steps to solve " +
                 "the Hanoi puzzle. \nMaybe you have to start again with more number of puzzles? :)\n");
     }
 
-    public static void againGame() {
+    public static void playAgain() {
         System.out.println("Do you want start again?");
         System.out.println("Type:\n1 - if you want start again;\n\"q\" - if you want exit the program.\n");
 

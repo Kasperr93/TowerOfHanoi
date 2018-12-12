@@ -7,13 +7,18 @@ import java.util.Stack;
 
 /**
  * @author Tomasz Kasperek
- * @version 1.0 12/07/2018
+ * @version 1.0.1 12/12/2018
  * @since 0.1
  */
 
 public class GameLogic {
-    private Rod[] rods = new Rod[3];
-    private int steps = 0;
+    private Rod[] rods;
+    private int steps;
+
+    public GameLogic() {
+        rods = new Rod[3];
+        steps = 0;
+    }
 
     public void generateGame(int numberOfDisk) {
         rods[0] = new Rod("Rod A", new Stack<>());
@@ -24,20 +29,20 @@ public class GameLogic {
             rods[0].getDisks().add(new Disk(i));
         }
 
-        ConsoleInterfaces.displayGame(rods);
+        ConsoleInterfaces.displayGameOnConsole(rods);
     }
 
-    public Rod firstStep() {
+    public Rod readSourceRod() {
         var rodNumber = ConsoleInterfaces.getFirstMove();
         return rods[rodNumber - 1];
     }
 
-    public Rod secondStep() {
+    public Rod readDestinationRod() {
         var rodNumber = ConsoleInterfaces.getSecondMove();
         return rods[rodNumber - 1];
     }
 
-    public void doTheSelectMove(Rod fromRod, Rod toRod) {
+    public void doSelectedMove(Rod fromRod, Rod toRod) {
         var fromDiskSize = 0;
         int toDiskSize;
 
@@ -64,12 +69,12 @@ public class GameLogic {
             ConsoleInterfaces.notAllowedMove();
         }
 
-        ConsoleInterfaces.displayGame(rods);
+        ConsoleInterfaces.displayGameOnConsole(rods);
     }
 
     public boolean endGame() {
         if (rods[0].getDisks().isEmpty() && rods[1].getDisks().isEmpty()) {
-            ConsoleInterfaces.showResultGame(steps);
+            ConsoleInterfaces.getGameResult(steps);
             return true;
         }
 

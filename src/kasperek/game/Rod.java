@@ -6,7 +6,7 @@ import java.util.Stack;
 
 /**
  * @author Tomasz Kasperek
- * @version 0.3 11/29/2018
+ * @version 1.0 12/12/2018
  * @since 0.1
  */
 
@@ -18,11 +18,6 @@ public class Rod {
         this.name = name;
         this.disks = disks;
     }
-
-    public String getName() {
-        return name;
-    }
-
 
     public Stack<Disk> getDisks() {
         return disks;
