@@ -5,11 +5,18 @@ import kasperek.main.Main;
 
 /**
  * @author Tomasz Kasperek
- * @version 1.1.3 12/12/2018
+ * @version 1.2 12/14/2018
  * @since 0.1
  */
 
 public class ConsoleInterfaces {
+
+    /**
+     * The method is responsibility for display the welcome screen, gets the user choice and validate this value.
+     *
+     * @return the user selection.
+     */
+
     public static String welcomeScreen() {
         System.out.println("\033[1m\nHey! Let's play on Tower of Hanoi!\033[0m");
         System.out.println("\nType:");
@@ -28,6 +35,10 @@ public class ConsoleInterfaces {
 
         return userChoice;
     }
+
+    /**
+     * The method display the rules of the game.
+     */
 
     public static void gameRulesScreen() {
         System.out.println("\nThe Towers of Hanoi is an ancient puzzle played with three stacks and any number of " +
@@ -48,6 +59,10 @@ public class ConsoleInterfaces {
         Main.main(null);
     }
 
+    /**
+     * The method display the legend of the Tower of Hanoi.
+     */
+
     public static void legendOfHanoiScreen() {
         System.out.println("\nAccording to the legend of the Tower of Hanoi (originally the \"Tower of Brahma\" " +
                 "in a temple in the Indian city of Benares), \nthe temple priests are to transfer " +
@@ -67,9 +82,22 @@ public class ConsoleInterfaces {
         Main.main(null);
     }
 
+    /**
+     * The method display the solution, how to solve the Tower of Hanoi puzzle.
+     *
+     * @param fromRod from which rod the user have to move.
+     * @param toRod   to which rod the user have to move.
+     */
+
     public static void gameSolutionScreen(String fromRod, String toRod) {
         System.out.println("\nFrom \033[1mRod " + fromRod + "\033[0m" + " move to " + "\033[1mRod " + toRod + "\033[0m" + ".");
     }
+
+    /**
+     * The method is responsible for gets the number of disk to solve the Tower of Hanoi puzzle.
+     *
+     * @return number of disk to solve.
+     */
 
     public static int getNumbersDisk() {
         System.out.println("\nHow many disks do you want to solve?\n");
@@ -91,6 +119,12 @@ public class ConsoleInterfaces {
         return Integer.valueOf(choice);
     }
 
+    /**
+     * The method is responsible for displays result after each step who will do the user.
+     *
+     * @param rods list of rods with disks.
+     */
+
     public static void displayGameOnConsole(Rod[] rods) {
         System.out.println();
 
@@ -100,6 +134,12 @@ public class ConsoleInterfaces {
 
         System.out.println();
     }
+
+    /**
+     * The method gets the move from the user, from which rod the user want to move the disk.
+     *
+     * @return rod number, from which user want to move the disk.
+     */
 
     public static int getFirstMove() {
         System.out.println("From which rod do you want to move to the disk?");
@@ -123,6 +163,12 @@ public class ConsoleInterfaces {
         return Integer.valueOf(userChoice);
     }
 
+    /**
+     * The method gets the move from the user, to which rod the user want to move the disk.
+     *
+     * @return rod number, to which user want to move the disk.
+     */
+
     public static int getSecondMove() {
         System.out.println("\nTo which rod do you want to move to the disk?");
         System.out.println("Type 1, 2 or 3:\n");
@@ -145,18 +191,36 @@ public class ConsoleInterfaces {
         return Integer.valueOf(userChoice);
     }
 
+    /**
+     * The method display the error in the console that the rod is empty.
+     */
+
     public static void rodIsEmpty() {
         System.err.println("\nThe rod is empty. Try again.\n");
     }
+
+    /**
+     * The method display the error in the console that the move is not allowed.
+     */
 
     public static void notAllowedMove() {
         System.err.println("\nThe move isn't allowed. Try again.");
     }
 
+    /**
+     * The method display summary of the game.
+     *
+     * @param steps how many steps did the user to solve the puzzle.
+     */
+
     public static void getGameResult(int steps) {
         System.out.println("\nCongratulations! You ended the Tower of Hanoi. You needed a " + steps + " steps to solve " +
                 "the Hanoi puzzle. \nDo have you to start again with more number of puzzles? :)\n");
     }
+
+    /**
+     * The method display the question about the again game, gets the user choice and validate this value.
+     */
 
     public static void playAgain() {
         System.out.println("Do you want to start again?");
