@@ -7,7 +7,11 @@ import java.util.Stack;
 
 /**
  * @author Tomasz Kasperek
- * @version 1.1 12/12/2018
+ * @version 1.1.1 12/18/2018
+ * @see Disk
+ * @see Rod
+ * @see ConsoleInterfaces
+ * @see kasperek.utils.Utils
  * @since 0.1
  */
 
