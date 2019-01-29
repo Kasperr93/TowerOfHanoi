@@ -7,7 +7,7 @@ import java.util.Stack;
 
 /**
  * @author Tomasz Kasperek
- * @version 1.1.1 12/18/2018
+ * @version 1.1.2 01/18/2018
  * @see Disk
  * @see Rod
  * @see ConsoleInterfaces
@@ -26,6 +26,10 @@ public class GameLogic {
     public GameLogic() {
         rods = new Rod[3];
         steps = 0;
+    }
+
+    public void setRods(Rod[] rods) {
+        this.rods = rods;
     }
 
     /**
