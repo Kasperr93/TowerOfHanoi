@@ -127,37 +127,20 @@ public class GameLogicTest {
     public void shouldDisallowMoveBiggerDiskToSmaller() {
 
         // Given
+        final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
+
         game.setRods(rods);
 
+        System.setErr(new PrintStream(errContent));
+
         // When
+        game.doSelectedMove(rods[0], rods[1]);
         game.doSelectedMove(rods[0], rods[1]);
 
         // Then
         assertEquals(2, rods[0].getDisks().size());
         assertEquals(1, rods[1].getDisks().size());
         assertEquals(0, rods[2].getDisks().size());
-    }
-
-    /**
-     * Test <code>shouldEndGameAfterTransferAllDisksToLastRod</code> checks that game was ended after the transfer
-     * all disks to the last rod.
-     */
-
-    @Test
-    public void shouldEndGameAfterTransferAllDisksToLastRod() {
-
-        // Given
-        rods[2].getDisks().add(new Disk(3));
-        rods[2].getDisks().add(new Disk(2));
-        rods[1].getDisks().add(new Disk(1));
-
-        game.setRods(rods);
-
-        // When
-        game.doSelectedMove(rods[1], rods[2]);
-
-        // Then
-//        assert
-
+        assertEquals("\nThe move isn't allowed. Try again.\n", errContent.toString());
     }
 }
