@@ -5,7 +5,7 @@ import kasperek.main.Main;
 
 /**
  * @author Tomasz Kasperek
- * @version 1.2 12/14/2018
+ * @version 1.2.1 03/13/2019
  * @since 0.1
  */
 
@@ -20,7 +20,7 @@ public class ConsoleInterfaces {
     public static String welcomeScreen() {
         System.out.println("\033[1m\nHey! Let's play on Tower of Hanoi!\033[0m");
         System.out.println("\nType:");
-        System.out.println("\033[1m1\033[0m - If you knows the game rules and you want to start the game;");
+        System.out.println("\033[1m1\033[0m - If you know the game rules and you want to start the game;");
         System.out.println("\033[1m2\033[0m - If you want to know the game rules;");
         System.out.println("\033[1m3\033[0m - If you want to know the Hanoi legend;");
         System.out.println("\033[1m4\033[0m - If you want to see how to solution Tower of Hanoi;");
@@ -142,7 +142,7 @@ public class ConsoleInterfaces {
      */
 
     public static int getFirstMove() {
-        System.out.println("From which rod do you want to move to the disk?");
+        System.out.println("From which rod do you want to move the disk?");
         System.out.println("Type 1, 2 or 3:\n");
 
         String userChoice = Utils.readLine();
@@ -170,7 +170,7 @@ public class ConsoleInterfaces {
      */
 
     public static int getSecondMove() {
-        System.out.println("\nTo which rod do you want to move to the disk?");
+        System.out.println("\nTo which rod do you want to move the disk?");
         System.out.println("Type 1, 2 or 3:\n");
 
         String userChoice = Utils.readLine();
@@ -214,7 +214,7 @@ public class ConsoleInterfaces {
      */
 
     public static void getGameResult(int steps) {
-        System.out.println("\nCongratulations! You ended the Tower of Hanoi. You needed a " + steps + " steps to solve " +
+        System.out.println("\nCongratulations! You ended the Tower of Hanoi. You needed " + steps + " steps to solve " +
                 "the Hanoi puzzle. \nDo have you to start again with more number of puzzles? :)\n");
     }
 
