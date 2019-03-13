@@ -2,7 +2,7 @@ package kasperek.game;
 
 /**
  * @author Tomasz Kasperek
- * @version 1.0 12/12/2018
+ * @version 1.0.1 03/13/2019
  * @since 0.1
  */
 
@@ -21,7 +21,7 @@ public class Disk {
      * @return gets a disk size.
      */
 
-    public int getSize() {
+    int getSize() {
         return size;
     }
 

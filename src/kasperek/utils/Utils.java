@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 
 /**
  * @author Tomasz Kasperek
- * @version 1.0 12/14/2018
+ * @version 1.0.1 03/13/2019
  * @since 0.1
  */
 
@@ -18,7 +18,7 @@ public class Utils {
      * @return value entered by the user.
      */
 
-    public static String readLine() {
+    static String readLine() {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String line = "";
 
