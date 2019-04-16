@@ -7,7 +7,7 @@ import java.util.Stack;
 
 /**
  * @author Tomasz Kasperek
- * @version 1.1.2 01/18/2019
+ * @version 1.1.3 04/16/2019
  * @see Disk
  * @see Rod
  * @see ConsoleInterfaces
@@ -57,7 +57,7 @@ public class GameLogic {
      */
 
     public Rod readSourceRod() {
-        var rodNumber = ConsoleInterfaces.getFirstMove();
+        var rodNumber = ConsoleInterfaces.getMove(true);
         return rods[rodNumber - 1];
     }
 
@@ -68,7 +68,7 @@ public class GameLogic {
      */
 
     public Rod readDestinationRod() {
-        var rodNumber = ConsoleInterfaces.getSecondMove();
+        var rodNumber = ConsoleInterfaces.getMove(false);
         return rods[rodNumber - 1];
     }
 

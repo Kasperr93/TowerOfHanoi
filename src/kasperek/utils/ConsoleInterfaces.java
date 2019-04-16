@@ -5,7 +5,7 @@ import kasperek.main.Main;
 
 /**
  * @author Tomasz Kasperek
- * @version 1.2.3 04/16/2019
+ * @version 1.2.4 04/16/2019
  * @since 0.1
  */
 
@@ -141,36 +141,11 @@ public class ConsoleInterfaces {
      * @return rod number, from which user want to move the disk.
      */
 
-    public static int getFirstMove() {
-        System.out.println("From which rod do you want to move the disk?");
-        System.out.println("Type 1, 2 or 3:\n");
-
-        String userChoice = Utils.readLine();
-        var correctValue = false;
-
-        while (!correctValue) {
-            if (!Utils.isNumber(userChoice)) {
-                System.err.println("This isn't a number. Try again.\n");
-                userChoice = Utils.readLine();
-            } else if (Integer.valueOf(userChoice) < 1 || Integer.valueOf(userChoice) > 3) {
-                System.err.println("The rod doesn't exist. Try again.\n");
-                userChoice = Utils.readLine();
-            } else {
-                correctValue = true;
-            }
-        }
-
-        return Integer.valueOf(userChoice);
-    }
-
-    /**
-     * The method gets the move from the user, to which rod the user want to move the disk.
-     *
-     * @return rod number, to which user want to move the disk.
-     */
-
-    public static int getSecondMove() {
-        System.out.println("\nTo which rod do you want to move the disk?");
+    public static int getMove(boolean firstStep) {
+        if (firstStep)
+            System.out.println("From which rod do you want to move the disk?");
+        else
+            System.out.println("\nTo which rod do you want to move the disk?");
         System.out.println("Type 1, 2 or 3:\n");
 
         String userChoice = Utils.readLine();
@@ -204,7 +179,7 @@ public class ConsoleInterfaces {
      */
 
     public static void notAllowedMove() {
-        System.err.println("\nThe move isn't allowed. Try again.");
+        System.err.println("\nThe move isn't allowed. Try again.\n");
     }
 
     /**

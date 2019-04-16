@@ -4,7 +4,6 @@ import kasperek.game.Disk;
 import kasperek.game.GameLogic;
 import kasperek.game.Rod;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
