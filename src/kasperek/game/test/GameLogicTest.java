@@ -16,7 +16,7 @@ import static org.junit.Assert.assertNotNull;
 
 /**
  * @author Tomasz Kasperek
- * @version 1.0.1 04/16/2019
+ * @version 1.0.2 04/16/2019
  * @see GameLogic
  * @since 1.0
  */
@@ -26,29 +26,12 @@ public class GameLogicTest {
     private static GameLogic game;
 
     /**
-     * The method is responsibility for the prepare tests.
-     */
-
-    @BeforeClass
-    public static void setUpBeforeClass() {
-        rods = new Rod[3];
-        rods[0] = new Rod("Rod A", new Stack<>());
-        rods[1] = new Rod("Rod B", new Stack<>());
-        rods[2] = new Rod("Rod C", new Stack<>());
-
-        rods[0].getDisks().add(new Disk(3));
-        rods[0].getDisks().add(new Disk(2));
-        rods[0].getDisks().add(new Disk(1));
-
-        game = new GameLogic();
-    }
-
-    /**
      * The method is responsibility for clearing all data after each test.
      */
 
     @Before
     public void setUpBeforeTest() {
+        rods = new Rod[3];
         rods[0] = new Rod("Rod A", new Stack<>());
         rods[1] = new Rod("Rod B", new Stack<>());
         rods[2] = new Rod("Rod C", new Stack<>());
