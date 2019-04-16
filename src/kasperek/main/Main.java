@@ -6,7 +6,7 @@ import kasperek.utils.ConsoleInterfaces;
 
 /**
  * @author Tomasz Kasperek
- * @version 1.0.2 04/16/2019
+ * @version 1.0.3 04/16/2019
  * @since 0.1
  */
 
@@ -43,6 +43,7 @@ public class Main {
                 break;
             default:
                 ConsoleInterfaces.legendOfHanoiScreen();
+                break;
         }
     }
 }

@@ -5,7 +5,7 @@ import kasperek.main.Main;
 
 /**
  * @author Tomasz Kasperek
- * @version 1.2.2 04/16/2019
+ * @version 1.2.3 04/16/2019
  * @since 0.1
  */
 
@@ -234,7 +234,7 @@ public class ConsoleInterfaces {
                 Runtime.getRuntime().exit(0);
             else if (userChoice.equals("1")) {
                 correctValue = true;
-                Main.main(null);
+                Main.main(new String[0]);
             } else {
                 System.err.println("\nInvalid value. Try again.\n");
                 userChoice = Utils.readLine();
