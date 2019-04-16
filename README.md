@@ -1,4 +1,6 @@
 # TowerOfHanoi
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c35d1910a6e847ef97c9f810b77060e1)](https://app.codacy.com/app/Kasperr93/TowerOfHanoi?utm_source=github.com&utm_medium=referral&utm_content=Kasperr93/TowerOfHanoi&utm_campaign=Badge_Grade_Dashboard)
+
 Tower of Hanoi game
 
 <img width="457" alt="Start" src="https://user-images.githubusercontent.com/26023953/54292664-e2033d80-45ae-11e9-9e20-1539286c24b7.png">
