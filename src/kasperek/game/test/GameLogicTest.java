@@ -1,4 +1,4 @@
-package kasperek.tests;
+package kasperek.game.test;
 
 import kasperek.game.Disk;
 import kasperek.game.GameLogic;
@@ -16,7 +16,7 @@ import static org.junit.Assert.assertNotNull;
 
 /**
  * @author Tomasz Kasperek
- * @version 1.0 01/18/2019
+ * @version 1.0.1 04/16/2019
  * @see GameLogic
  * @since 1.0
  */

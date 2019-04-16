@@ -1,4 +1,4 @@
-package kasperek.tests;
+package kasperek.utils.test;
 
 import kasperek.utils.Utils;
 import org.junit.Test;
@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 
 /**
  * @author Tomasz Kasperek
- * @version 1.0 01/18/2019
+ * @version 1.0.1 04/16/2019
  * @see kasperek.utils
  * @since 1.0
  */

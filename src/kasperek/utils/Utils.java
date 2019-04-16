@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 
 /**
  * @author Tomasz Kasperek
- * @version 1.0.1 03/13/2019
+ * @version 1.0.2 04/16/2019
  * @since 0.1
  */
 
@@ -62,12 +62,10 @@ public class Utils {
      */
 
     public static boolean validateUserValue(String choice) {
-        if (choice.equals("1") || choice.equals("2") || choice.equals("3") || choice.equals("4"))
-            return true;
-        else if (choice.equalsIgnoreCase("q"))
-            System.exit(0);
+        if (choice.equalsIgnoreCase("q"))
+            Runtime.getRuntime().exit(0);
 
-        return false;
+        return choice.equals("1") || choice.equals("2") || choice.equals("3") || choice.equals("4");
     }
 
     /**
