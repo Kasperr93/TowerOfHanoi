@@ -5,7 +5,7 @@ import kasperek.main.Main;
 
 /**
  * @author Tomasz Kasperek
- * @version 1.2.4 04/16/2019
+ * @version 1.2.5 04/19/2019
  * @since 0.1
  */
 
@@ -207,7 +207,7 @@ public class ConsoleInterfaces {
         while (!correctValue) {
             if (userChoice.equalsIgnoreCase("q"))
                 Runtime.getRuntime().exit(0);
-            else if (userChoice.equals("1")) {
+            else if ("1".equals(userChoice)) {
                 correctValue = true;
                 Main.main(new String[0]);
             } else {
