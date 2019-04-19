@@ -10,12 +10,11 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.Stack;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.*;
 
 /**
  * @author Tomasz Kasperek
- * @version 1.0.2 04/16/2019
+ * @version 1.1 04/19/2019
  * @see GameLogic
  * @since 1.0
  */
@@ -71,6 +70,7 @@ public class GameLogicTest {
         game.doSelectedMove(rods[0], rods[2]);
 
         // Then
+        assertFalse(game.endGame());
         assertEquals(2, rods[0].getDisks().size());
         assertEquals(0, rods[1].getDisks().size());
         assertEquals(1, rods[2].getDisks().size());
@@ -123,6 +123,35 @@ public class GameLogicTest {
         assertEquals(2, rods[0].getDisks().size());
         assertEquals(1, rods[1].getDisks().size());
         assertEquals(0, rods[2].getDisks().size());
-        assertEquals("\nThe move isn't allowed. Try again.\n", errContent.toString());
+        assertEquals("\nThe move isn't allowed. Try again.\n\n", errContent.toString());
+    }
+
+    /**
+     * Test <code>shouldEndGame</code> checks that the game is over.
+     */
+
+    @Test
+    public void shouldEndGame() {
+
+        // Given
+        rods = new Rod[3];
+        rods[0] = new Rod("1", new Stack<>());
+        rods[1] = new Rod("2", new Stack<>());
+        rods[2] = new Rod("3", new Stack<>());
+
+        rods[2].getDisks().add(new Disk(3));
+        rods[2].getDisks().add(new Disk(2));
+        rods[0].getDisks().add(new Disk(1));
+
+        game.setRods(rods);
+
+        // When
+        game.doSelectedMove(rods[0], rods[2]);
+
+        // Then
+        assertTrue(game.endGame());
+        assertEquals(0, rods[0].getDisks().size());
+        assertEquals(0, rods[1].getDisks().size());
+        assertEquals(3, rods[2].getDisks().size());
     }
 }
