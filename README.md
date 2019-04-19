@@ -1,9 +1,33 @@
-# TowerOfHanoi
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c35d1910a6e847ef97c9f810b77060e1)](https://app.codacy.com/app/Kasperr93/TowerOfHanoi?utm_source=github.com&utm_medium=referral&utm_content=Kasperr93/TowerOfHanoi&utm_campaign=Badge_Grade_Dashboard)
+# Tower of Hanoi
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c35d1910a6e847ef97c9f810b77060e1)](https://app.codacy.com/app/Kasperr93/TowerOfHanoi?utm_source=github.com&utm_medium=referral&utm_content=Kasperr93/TowerOfHanoi&utm_campaign=Badge_Grade_Dashboard) ![Language](https://img.shields.io/github/languages/top/Kasperr93/TowerOfHanoi.svg) ![Repo Size](https://img.shields.io/github/repo-size/Kasperr93/TowerOfHanoi.svg)
 
-Tower of Hanoi game
+The Tower of Hanoi (also called the Tower of Brahma or Lucas' Tower and sometimes pluralized) is a mathematical game or puzzle. It consists of three rods and a number of disks of different sizes, which can slide onto any rod.
 
-<img width="457" alt="Start" src="https://user-images.githubusercontent.com/26023953/54292664-e2033d80-45ae-11e9-9e20-1539286c24b7.png">
-<img width="432" alt="2" src="https://user-images.githubusercontent.com/26023953/54292663-e2033d80-45ae-11e9-96ec-1a4b7fc5882a.png">
-<img width="708" alt="3" src="https://user-images.githubusercontent.com/26023953/54292661-e2033d80-45ae-11e9-9771-0bd46914df56.png">
-<img width="702" alt="GameOver" src="https://user-images.githubusercontent.com/26023953/54292660-e2033d80-45ae-11e9-8051-afa7df7ba849.png">
+## Table of contents
+* [General info](#general-info)
+* [Rules](#rules)
+* [Screenshots](#screenshots)
+* [Status](#status)
+* [Contact](#contact)
+
+## General info
+The puzzle was invented by the French mathematician Édouard Lucas in 1883. There is a story about an Indian temple in Kashi Vishwanath which contains a large room with three time-worn posts in it, surrounded by 64 golden disks. Brahmin priests, acting out the command of an ancient prophecy, have been moving these disks in accordance with the immutable rules of Brahma since that time. The puzzle is therefore also known as the Tower of Brahma puzzle. According to the legend, when the last move of the puzzle is completed, the world will end.
+
+If the legend were true, and if the priests were able to move disks at a rate of one per second, using the smallest number of moves it would take them 264 − 1 seconds or roughly 585 billion years to finish, which is about 42 times the current age of the Universe.
+
+There are many variations on this legend. For instance, in some tellings the temple is a monastery, and the priests are monks. The temple or monastery may be said to be in different parts of the world—including Hanoi, Vietnam—and may be associated with any religion. In some versions other elements are introduced, such as the fact that the tower was created at the beginning of the world, or that the priests or monks may make only one move per day.
+
+## Rules
+The goal of the puzzle is to move all the disks from the leftmost peg to the rightmost peg, adhering to the following rules: 
+* Move only one disk at a time. 
+* A larger disk may not be placed ontop of a smaller disk.
+* All disks, except the one being moved, must be on a peg.
+
+## Screenshots
+
+
+## Status
+The project is: _finished_
+
+## Contact
+Created by [@Kasperr93](https://www.linkedin.com/in/kasperek-tomasz/) - feel free to contact me!
