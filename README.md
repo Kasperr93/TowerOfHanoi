@@ -24,7 +24,13 @@ The goal of the puzzle is to move all the disks from the leftmost peg to the rig
 * All disks, except the one being moved, must be on a peg.
 
 ## Screenshots
+<img width="672" alt="Zrzut ekranu 2019-04-29 o 15 06 32" src="https://user-images.githubusercontent.com/26023953/56898207-bec61c00-6a90-11e9-87a0-dce69b656929.png">
 
+<img width="672" alt="Zrzut ekranu 2019-04-29 o 15 06 58" src="https://user-images.githubusercontent.com/26023953/56898221-c7b6ed80-6a90-11e9-9748-8b8a43e8712f.png">
+
+<img width="672" alt="Zrzut ekranu 2019-04-29 o 15 07 12" src="https://user-images.githubusercontent.com/26023953/56898232-d0a7bf00-6a90-11e9-8511-3d2fa3312fcc.png">
+
+<img width="672" alt="Zrzut ekranu 2019-04-29 o 15 08 22" src="https://user-images.githubusercontent.com/26023953/56898242-d69da000-6a90-11e9-906e-9e75e67b3089.png">
 
 ## Status
 The project is: _finished_
